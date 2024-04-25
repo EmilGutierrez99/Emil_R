@@ -57,7 +57,7 @@
 
 fclose($archivo);
      ?>
-          <h1 class="titulo">Foto</h1>
+          <h1 class="titulo">Imagen</h1>
           <img src= "<?php echo $datos[7];  ?>" alt= "foto" title= "foto persona" width= "200" height= "200"/>
           
           <h1 class="titulo">Datos personales</h1>
