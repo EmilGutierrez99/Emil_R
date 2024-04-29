@@ -13,3 +13,5 @@ do
 done
 
 echo "¡Archivo CSV '$filename' con 60 filas creado exitosamente!"
+
+#capturar en nombre por del fichero por consola  sh srcip.sh ejemplo.csv, 60  cambiar el nombre del archivo y intodrucir el numero del bucle
