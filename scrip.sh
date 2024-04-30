@@ -1,13 +1,15 @@
 #!/bin/bash
 
 # Nombre del archivo CSV
-filename="ejemplo.csv"
+read -p "Introduce el nombre del archivo: " filename
+read -p "Introduce el numero de repeticiones del bucle: " b
+
 
 # Escribir la cabecera del CSV
 echo "Nombre, Edad, Celular,  Correo" > "$filename"
 
 # Bucle para generar 60 filas de datos en el CSV
-for ((i=1; i<=60; i++))
+for ((i=1; i<=$b; i++))
 do
     echo "Nombre$i, $i, $i$i$i$i, Correo$i@gmail.com" >> "$filename"
 done
