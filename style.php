@@ -5,7 +5,7 @@ $archivo = fopen("archii.csv", 'r');
      $numlinea = 0; // Initialize the line counter
 
      while ($linea = fgets($archivo)) {
-          $numlinea++;
+          
           if(date("s") == 2){
                $numlinea = 2;
           
