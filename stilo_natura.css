@@ -10,7 +10,7 @@ body{
     font-optical-sizing: auto;
     font-style: normal;
     
-    background-color: rgba(127, 255, 212, 80%);
+    background-color: hsl(190, 100%, 50%);
     background-image: url("img/natura.png") ;
     background-repeat: no-repeat;
     background-position: right top;
