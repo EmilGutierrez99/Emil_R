@@ -2,7 +2,7 @@
      
      <head>
           <title>Curriculum</title>
-          <link rel = "stylesheet" href="stilo_natura.css">
+          <link rel = "stylesheet" href="style.php">
      </head>
      <body>
 
@@ -16,7 +16,7 @@
      
      
      
-     $archivo = fopen("archivo.csv", 'r');
+     $archivo = fopen("archii.csv", 'r');
 
      $numlinea = 0; // Initialize the line counter
 
