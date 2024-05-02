@@ -16,7 +16,7 @@
      
      
      
-     $archivo = fopen("archii.csv", 'r');
+     $archivo = fopen("archivo.csv", 'r');
 
      $numlinea = 0; // Initialize the line counter
 
