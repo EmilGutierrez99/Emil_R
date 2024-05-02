@@ -575,19 +575,7 @@ $archivo = fopen("archii.csv", 'r');
                     $datos = explode(',', $linea); // explorar en linea hasta ','
                     echo $datos[0]; // salida del dato en celda 0
                                                                                
-                              }}
-
-          if(date("s") == 00){
-               $numlinea = 60;
-                                                                                              
-                                                                                    
-               if ($numlinea == 60) { // fija el valor en la primera linea
-                    $datos = explode(',', $linea); // explorar en linea hasta ','
-                    echo $datos[0]; // salida del dato en celda 0
-                                                                                                   
-                    }}
-
-          
+                          }}      
 
     }        
 
