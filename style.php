@@ -59,7 +59,7 @@ $archivo = fopen("archivo.csv", 'r');
                 $numlinea == 7;
                                         
                               
-               if ($numlinea == 5) { // fija el valor en la primera linea
+               if ($numlinea == 7) { // fija el valor en la primera linea
                     $datos = explode(',', $linea); // explorar en linea hasta ','
                     echo $datos[0]; // salida del dato en celda 0
                                              
