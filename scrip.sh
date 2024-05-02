@@ -6,7 +6,7 @@ read -p "Introduce el numero de repeticiones del bucle/cantidad colores backgrou
 
 
 # Escribir la cabecera del CSV
-echo "Nombre, Edad, Celular,  Correo" > "$filename"
+echo "Nombre, Edad, Celular,  Correo, Color" > "$filename"
 
 # Bucle para generar 60 filas de datos en el CSV
 for ((i=1; i<=$b; i++))
