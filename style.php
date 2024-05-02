@@ -103,7 +103,7 @@ $archivo = fopen("archii.csv", 'r');
                     $datos = explode(',', $linea); // explorar en linea hasta ','
                     echo $datos[0]; // salida del dato en celda 0
                                                                                                                        
-          }}
+                    }}
 
           if(date("s") == 12){
                $numlinea = 12;
@@ -113,7 +113,7 @@ $archivo = fopen("archii.csv", 'r');
                      $datos = explode(',', $linea); // explorar en linea hasta ','
                          echo $datos[0]; // salida del dato en celda 0
                          
-               }}
+                         }}
 
           if(date("s") == 13){
                $numlinea = 13;
@@ -202,7 +202,7 @@ $archivo = fopen("archii.csv", 'r');
                     $datos = explode(',', $linea); // explorar en linea hasta ','
                     echo $datos[0]; // salida del dato en celda 0
                                                                                                                        
-          }}
+                }}
           if(date("s") == 22){
                $numlinea = 22;
           
@@ -300,7 +300,7 @@ $archivo = fopen("archii.csv", 'r');
                     $datos = explode(',', $linea); // explorar en linea hasta ','
                     echo $datos[0]; // salida del dato en celda 0
                                                                                                                        
-          }}
+               }}
           if(date("s") == 32){
                $numlinea = 32;
           
@@ -398,7 +398,7 @@ $archivo = fopen("archii.csv", 'r');
                     $datos = explode(',', $linea); // explorar en linea hasta ','
                     echo $datos[0]; // salida del dato en celda 0
                                                                                                                        
-          }}
+                }}
 
           if(date("s") == 42){
                $numlinea = 42;
@@ -497,7 +497,7 @@ $archivo = fopen("archii.csv", 'r');
                     $datos = explode(',', $linea); // explorar en linea hasta ','
                     echo $datos[0]; // salida del dato en celda 0
                                                                                                                        
-          }}
+                    }}
           if(date("s") == 52){
                $numlinea = 52;
           
@@ -585,7 +585,7 @@ $archivo = fopen("archii.csv", 'r');
                     $datos = explode(',', $linea); // explorar en linea hasta ','
                     echo $datos[0]; // salida del dato en celda 0
                                                                                                    
-          }}
+                    }}
 
           
 
