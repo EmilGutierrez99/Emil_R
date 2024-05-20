@@ -1,7 +1,7 @@
 <?php
 // Función para obtener el número de fila a mostrar
 function Prin_csv() {
-    return 1; // Aquí estableces el valor de la fila a mostrar
+    return 10; // Aquí estableces el valor de la fila a mostrar
 }
 
 // Función para cargar el CSV y devolver una matriz
