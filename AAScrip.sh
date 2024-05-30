@@ -19,27 +19,38 @@ sudo apt install mysql-server php-mysql -y
 #seteando el espacio de trabajo
 cd /var/ #cd /var/
 
- if [ -d "/var/www/html" ] #crear la carpeta www/html  verificar si existe primero sino crearla
+#crear la carpeta www/html  verificar si existe primero sino crearla
+echo -e "\n\nVerificacion de Directorios\n"
+ if [ -d "/var/www/html" ] 
 then
     echo "El directorio /var/www/html ya existe."
 else
     echo "El directorio /var/www no existe. Creando..."
     sudo mkdir /var/www/html
-fi #crear la carpeta www/html  verificar si existe primero sino crearla
-
+fi 
 #crear un www temporal
-#clonar el repositorio de github en la carpeta temporal www
-#hacer los checkouts de las ramas y actualizar ramas
-#copiamos el contenido de la carpeta temporal a la carpeta html
-#una vez copiado todo, eliminamos la carpeta temporal
+sudo mkdir /var/www/temp
 
+#clonar el repositorio de github en la carpeta temporal 
 echo -e "\n\nClonamos repositorio de github\n"
 git clone https://github.com/EmilGutierrez99/Emil_R.git
 
+#hacer los checkouts de las ramas y actualizar ramas
 echo -e "\n\nCambiamos de rama a la rama de desarrollo\n"
 cd Emil_R
 git checkout Actualizaciones
 git pull
+
+#copiamos el contenido de la carpeta temporal a la carpeta html
+echo -e "\n\nCopiamos el contenido de la carpeta temporal a la carpeta html\n"
+sudo cp -r * /var/www/temp/ /var/www/html/
+
+#una vez copiado todo, eliminamos la carpeta temporal
+echo -e "\n\nEliminamos la carpeta temporal\n"
+sudo rm -r /var/www/temp/
+
+
+
 
 cd ..
 
