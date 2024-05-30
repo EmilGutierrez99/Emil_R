@@ -37,25 +37,21 @@ git clone https://github.com/EmilGutierrez99/Emil_R.git
 
 #hacer los checkouts de las ramas y actualizar ramas
 echo -e "\n\nCambiamos de rama a la rama de desarrollo\n"
-cd Emil_R
+cd Emil_R/
 git checkout Actualizaciones
 git pull
+
+cd /var/
 
 #copiamos el contenido de la carpeta temporal a la carpeta html
 echo -e "\n\nCopiamos el contenido de la carpeta temporal a la carpeta html\n"
 sudo cp -r * /var/www/temp/ /var/www/html/
 
+
+
 #una vez copiado todo, eliminamos la carpeta temporal
 echo -e "\n\nEliminamos la carpeta temporal\n"
 sudo rm -r /var/www/temp/
-
-
-
-
-cd ..
-
-echo -e "\n\nMovemos el directorio a la ruta /var/www/html/\n"
-sudo mv Emil_R /var/www/html/
 
 #cd ..
 #cd ..
