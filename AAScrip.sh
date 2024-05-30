@@ -25,7 +25,7 @@ echo -e "\n\nVerificacion de Directorios\n"
 then
     echo "El directorio /var/www/html ya existe."
 else
-    echo "El directorio /var/www no existe. Creando..."
+    echo "El directorio /var/www/html no existe. Creando..."
     sudo mkdir /var/www/html
 fi 
 #crear un www temporal
@@ -42,20 +42,15 @@ cd /var/www/temp/Emil_R/
 git checkout Actualizaciones
 git pull
 
-cd /var/
+cd /var/www/temp/
 
 #copiamos el contenido de la carpeta temporal a la carpeta html
 echo -e "\n\nCopiamos el contenido de la carpeta temporal a la carpeta html\n"
-sudo cp -r  /var/www/temp/Emil_R/ /var/www/html/
+sudo mv Emil_R/ /var/www/html/
 
 
+cd /var/www/
 
 #una vez copiado todo, eliminamos la carpeta temporal
 echo -e "\n\nEliminamos la carpeta temporal\n"
 sudo rm -r /var/www/temp
-
-#cd ..
-#cd ..
-#cd /var/www/html/Emil_R/
-#git checkout Actualizaciones
-#git pull
