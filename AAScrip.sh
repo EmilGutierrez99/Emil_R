@@ -16,6 +16,8 @@ sudo apt install php-curl php-gd php-json php-mbstring php-xml -y
 echo -e "\n\nInstalling MySQL\n"
 sudo apt install mysql-server php-mysql -y
 
+echo -e "\n\nInstalling net-tools\n"
+sudo apt install net-tools -y
 #seteando el espacio de trabajo
 cd /var/ #cd /var/
 
@@ -40,11 +42,11 @@ sudo git clone https://github.com/EmilGutierrez99/Emil_R.git
 
 #hacer los checkouts de las ramas y actualizar ramas
 echo -e "\n\nCambiamos de rama a la rama de desarrollo\n"
-cd Emil_R/
+cd /var/www/temp/Emil_R/
 sudo git checkout Actualizaciones
 sudo git pull
 
-cd ..
+cd /var/www/temp/
 
 #copiamos el contenido de la carpeta temporal a la carpeta html
 echo -e "\n\nCopiamos el contenido de la carpeta temporal a la carpeta html\n"
