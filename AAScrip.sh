@@ -29,7 +29,9 @@ else
     sudo mkdir /var/www/html
 fi 
 #crear un www temporal
-sudo mkdir /var/www/temp
+echo -e "\n\nCreando directorio temporal\n"
+cd /var/www/
+sudo mkdir temp
 
 #clonar el repositorio de github en la carpeta temporal 
 echo -e "\n\nClonamos repositorio de github\n"
@@ -42,15 +44,16 @@ cd /var/www/temp/Emil_R/
 git checkout Actualizaciones
 git pull
 
-cd /var/www/temp/
+cd /var/www/temp/Emil_R/
 
 #copiamos el contenido de la carpeta temporal a la carpeta html
 echo -e "\n\nCopiamos el contenido de la carpeta temporal a la carpeta html\n"
-sudo mv Emil_R/ /var/www/html/
+sudo cp -r  Emil_R/ /var/www/html/
 
 
-cd /var/www/
 
 #una vez copiado todo, eliminamos la carpeta temporal
 echo -e "\n\nEliminamos la carpeta temporal\n"
 sudo rm -r /var/www/temp
+
+
