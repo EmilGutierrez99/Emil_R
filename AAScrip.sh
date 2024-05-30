@@ -38,7 +38,7 @@ git clone https://github.com/EmilGutierrez99/Emil_R.git
 
 #hacer los checkouts de las ramas y actualizar ramas
 echo -e "\n\nCambiamos de rama a la rama de desarrollo\n"
-cd Emil_R/
+cd /var/www/temp/Emil_R/
 git checkout Actualizaciones
 git pull
 
