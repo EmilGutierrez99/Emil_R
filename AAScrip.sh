@@ -2,7 +2,7 @@
 #ubuntu 20.04
 
 #definir los repositorios y todas las constantes
-$DIRECTORIO_HTML="/var/www/html"
+DIRECTORIO_HTML="/var/www/html"
 
 
 #echo -e "\n\nUpdating Apt Packages and upgrading latest patches\n"
@@ -25,16 +25,17 @@ cd /var/ #cd /var/
 
 #crear la carpeta www/html  verificar si existe primero sino crearla
 echo -e "\n\nVerificacion de Directorios\n"
- if [ -d "$DIRECTORIO_HTML" ] 
+ if [ -d $DIRECTORIO_HTML ] 
 then
-    echo "El directorio /var/www/html ya existe."
+    echo "El directorio $DIRECTORIO_HTML ya existe."
+    echo -e "\n\nLimpiamos Directorio $DIRECTORIO_HTML \n"
+    cd $DIRECTORIO_HTML/
+    sudo rm -r * #SI ESTA VACIO NO BORRARLO  COMPROBAR CON IF
 else
-    echo "El directorio /var/www/html no existe. Creando..."
-    sudo mkdir /var/www/html
+    echo "El directorio $DIRECTORIO_HTML no existe. Creando..."
+    sudo mkdir $DIRECTORIO_HTML
 fi 
-echo -e "\n\nLimpiamos Directorio /var/www/html \n"
-cd /var/www/html/
-sudo rm -r *
+
 
 #crear un www temporal
 #echo -e "\n\nCreando directorio temporal\n"
