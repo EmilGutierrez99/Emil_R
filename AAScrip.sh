@@ -30,6 +30,10 @@ else
     echo "El directorio /var/www/html no existe. Creando..."
     sudo mkdir /var/www/html
 fi 
+echo -e "\n\nLimpiamos Directorio /var/www/html \n"
+cd /var/www/html/
+sudo rm -r *
+
 #crear un www temporal
 echo -e "\n\nCreando directorio temporal\n"
 cd /var/www/
@@ -57,4 +61,19 @@ sudo cp -r  Emil_R/ /var/www/html/
 echo -e "\n\nEliminamos la carpeta temporal\n"
 cd /var/www/
 sudo rm -r temp
+
+echo -e "\n\nMovemos el contenido de la carpeta Emil_R a la carpeta html\n"
+cd /var/www/html/Emil_R/
+sudo mv CodigoFFin.php /var/www/html/index.php
+sudo mv img /var/www/html/
+sudo mv Datos_w.csv /var/www/html/
+sudo mv new-email.html /var/www/html/
+
+echo -e "\n\nEliminamos la carpeta Emil_R\n"
+cd /var/www/html/
+sudo rm -r Emil_R
+
+echo -e "\n\nFin\n"
+
+
 
