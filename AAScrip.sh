@@ -36,7 +36,7 @@ sudo mkdir temp
 #clonar el repositorio de github en la carpeta temporal 
 echo -e "\n\nClonamos repositorio de github\n"
 cd /var/www/temp/
-git clone https://github.com/EmilGutierrez99/Emil_R.git
+sudo git clone https://github.com/EmilGutierrez99/Emil_R.git
 
 #hacer los checkouts de las ramas y actualizar ramas
 echo -e "\n\nCambiamos de rama a la rama de desarrollo\n"
@@ -51,9 +51,5 @@ echo -e "\n\nCopiamos el contenido de la carpeta temporal a la carpeta html\n"
 sudo cp -r  Emil_R/ /var/www/html/
 
 
-
 #una vez copiado todo, eliminamos la carpeta temporal
-echo -e "\n\nEliminamos la carpeta temporal\n"
-sudo rm -r /var/www/temp
-
 
