@@ -46,7 +46,7 @@ cd /var/
 
 #copiamos el contenido de la carpeta temporal a la carpeta html
 echo -e "\n\nCopiamos el contenido de la carpeta temporal a la carpeta html\n"
-sudo cp -r  /var/www/temp/ /var/www/html/
+sudo cp -r  /var/www/temp/Emil_R/ /var/www/html/
 
 
 
