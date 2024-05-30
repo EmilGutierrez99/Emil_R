@@ -52,7 +52,7 @@ sudo cp -r  /var/www/temp/ /var/www/html/
 
 #una vez copiado todo, eliminamos la carpeta temporal
 echo -e "\n\nEliminamos la carpeta temporal\n"
-sudo rm -r /var/www/temp/
+sudo rm -r /var/www/temp
 
 #cd ..
 #cd ..
