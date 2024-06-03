@@ -18,10 +18,10 @@ sudo apt-get update -y && sudo apt-get upgrade -y
 #sudo apt install php-curl php-gd php-json php-mbstring php-xml -y
 
 echo -e "\n\nInstalling MySQL\n"
-sudo apt install mysql-server -y
+sudo apt install -y mysql-server 
 
 echo -e "\n\nInstalling net-tools\n"
-sudo apt install net-tools -y
+sudo apt install -y net-tools 
 
 #seteando el espacio de trabajo
 cd /var/ #cd /var/
