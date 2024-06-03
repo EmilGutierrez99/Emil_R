@@ -5,7 +5,9 @@
 DIRECTORIO_HTML="/var/www/html"
 DIRECTORIO_TEMPORAL="/var/www/temp" 
 DIRECTORIO_TEMPORAL_GITHUB="/var/www/temp/Emil_R"
-RUTA_WWW="/var/www"
+DIRECTORIO_WWW="/var/www"
+DIRECTORIO_ORIGEN="/var"
+
 
 
 echo -e "\n\nUpdating Apt Packages and upgrading latest patches\n"
@@ -25,7 +27,7 @@ echo -e "\n\nInstalling net-tools\n"
 sudo apt install -y net-tools 
 
 #seteando el espacio de trabajo
-cd /var/ #cd /var/
+cd $DIRECTORIO_ORIGEN/ #cd /var/
 
 #crear la carpeta www/html  verificar si existe primero sino crearla
 echo -e "\n\nVerificacion de Directorios\n"
@@ -69,7 +71,7 @@ sudo mv new-email.html $DIRECTORIO_HTML/
 
 #una vez copiado todo, eliminamos la carpeta temporal
 echo -e "\n\nEliminamos la carpeta temporal\n"
-cd $RUTA_WWW/
+cd $DIRECTORIO_WWW/
 sudo rm -r temp
 
 echo -e "\n\nFin\n"
