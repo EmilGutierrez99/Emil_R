@@ -5,17 +5,18 @@
 DIRECTORIO_HTML="/var/www/html"
 DIRECTORIO_TEMPORAL="/var/www/temp" 
 DIRECTORIO_TEMPORAL_GITHUB="/var/www/temp/Emil_R"
+RUTA_WWW="/var/www"
 
 
 echo -e "\n\nUpdating Apt Packages and upgrading latest patches\n"
 sudo apt-get update -y && sudo apt-get upgrade -y
 
-#echo -e "\n\nInstalling Apache2 Web server\n"
-#sudo apt update && sudo apt install apache2 -y
+echo -e "\n\nInstalling Apache2 Web server\n"
+sudo apt update && sudo apt install -y apache2 
 
-#echo -e "\n\nInstalling PHP & Requirements\n"
-#sudo apt install -y php libapache2-mod-php -y
-#sudo apt install php-curl php-gd php-json php-mbstring php-xml -y
+echo -e "\n\nInstalling PHP & Requirements\n"
+sudo apt install -y php libapache2-mod-php -y
+sudo apt install -y php-curl php-gd php-json php-mbstring php-xml -y
 
 echo -e "\n\nInstalling MySQL\n"
 sudo apt install -y mysql-server 
@@ -61,14 +62,14 @@ sudo git pull
 
 echo -e "\n\nMovemos el contenido de la carpeta Emil_R a la carpeta html\n"
 
-sudo mv CodigoFFin.php /var/www/html/index.php
-sudo mv img /var/www/html/
-sudo mv Datos_w.csv /var/www/html/
-sudo mv new-email.html /var/www/html/
+sudo mv CodigoFFin.php $DIRECTORIO_HTML/index.php
+sudo mv img $DIRECTORIO_HTML/
+sudo mv Datos_w.csv $DIRECTORIO_HTML/
+sudo mv new-email.html $DIRECTORIO_HTML/
 
 #una vez copiado todo, eliminamos la carpeta temporal
 echo -e "\n\nEliminamos la carpeta temporal\n"
-cd /var/www/
+cd $RUTA_WWW/
 sudo rm -r temp
 
 echo -e "\n\nFin\n"
