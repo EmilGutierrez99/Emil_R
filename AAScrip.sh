@@ -3,9 +3,14 @@
 
 #////////////////////////////////////////
 echo -e "\n\nconfiguramos servicios unanttended\n"
-sudo apt-get remove --purge unattended-upgrades
-sudo apt-get install unattended-upgrades
-sudo reboot
+sudo systemctl stop unattended-upgrades.service
+sudo systemctl start unattended-upgrades.service
+sudo systemctl restart unattended-upgrades.service
+
+sudo systemctl restart unattended-upgrades.service
+sudo systemctl restart packagekit.service
+sudo systemctl restart udisks2.service
+
 #/////////////////////////////////////////
 
 #definir los repositorios y todas las constantes
