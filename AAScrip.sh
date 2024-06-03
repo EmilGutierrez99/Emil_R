@@ -6,7 +6,7 @@ echo -e "\n\nconfiguramos servicios unanttended\n"
 sudo apt-get remove --purge unattended-upgrades
 sudo apt-get install unattended-upgrades
 sudo reboot
-#////////////////////////////////////////
+#/////////////////////////////////////////
 
 #definir los repositorios y todas las constantes
 DIRECTORIO_HTML="/var/www/html"
