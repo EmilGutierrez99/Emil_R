@@ -3,6 +3,7 @@
 # Actualizar la lista de paquetes
 sudo apt update -y
 
+echo "MySQL instalando.."
 # Instalar debconf-utils para preconfigurar la instalación
 sudo apt install -y debconf-utils
 

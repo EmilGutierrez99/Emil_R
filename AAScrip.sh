@@ -1,16 +1,68 @@
 #!/bin/bash
 #ubuntu 20.04
 
-#////////////////////////////////////////
-#set debian frontend to not prompt
-export DEBIAN_FRONTEND="noninteractive";
-#update apt to get mysql repository
-sudo apt-get update
+# Actualizar la lista de paquetes
+sudo apt update -y
 
-#install mysql according to previous config
-sudo -E apt-get install mysql-server mysql-client --assume-yes --force-yes
+#Mysql
+#############################################
 
-#/////////////////////////////////////////
+echo "MySQL instalando.."
+# Instalar debconf-utils para preconfigurar la instalación
+sudo apt install -y debconf-utils
+
+# Configurar las respuestas para la instalación de MySQL
+DB_ROOT_PASSWORD="password"
+echo "mysql-server mysql-server/root_password password $DB_ROOT_PASSWORD" | sudo debconf-set-selections
+echo "mysql-server mysql-server/root_password_again password $DB_ROOT_PASSWORD" | sudo debconf-set-selections
+
+# Instalar MySQL Server
+sudo apt install -y mysql-server
+
+# Habilitar el servicio MySQL para que arranque automáticamente al iniciar el sistema
+sudo systemctl enable mysql
+
+# Iniciar el servicio MySQL
+sudo systemctl start mysql
+
+# Mostrar el estado del servicio MySQL
+sudo systemctl status mysql
+
+echo "MySQL se ha instalado y configurado correctamente de forma desatendida."
+
+#############################################
+
+# Apache
+#############################################
+
+echo "Instalando Apache..."
+
+# Instalar Apache
+sudo apt install -y apache2
+
+#verificamos version
+sudo apache2 -v
+
+echo "Apache se ha instalado y configurado correctamente de forma desatendida."
+
+#############################################
+
+# PHP
+#############################################
+
+# Instalar PHP junto con algunas extensiones comunes
+sudo apt install -y php libapache2-mod-php php-mysql php-cli php-curl php-zip php-gd php-mbstring php-xml
+
+# Verificar la versión de PHP instalada
+php -v
+
+echo "PHP se ha instalado y configurado correctamente de forma desatendida."
+
+#############################################
+
+
+
+
 
 #definir los repositorios y todas las constantes
 DIRECTORIO_HTML="/var/www/html"
@@ -22,20 +74,6 @@ REPOSITORIO_GITHUB="https://github.com/EmilGutierrez99/Emil_R.git"
 
 
 
-echo -e "\n\nUpdating Apt Packages and upgrading latest patches\n"
-sudo apt-get update -y && sudo apt-get upgrade -y
-
-echo -e "\n\nInstalling Apache2 Web server\n"
-sudo apt update && sudo apt install -y apache2 
-
-echo -e "\n\nInstalling PHP & Requirements\n"
-sudo apt install -y php libapache2-mod-php -y
-sudo apt install -y php-curl php-gd php-json php-mbstring php-xml -y
-
-echo -e "\n\nInstalling MySQL\n"
-#install mysql according to previous config
-#sudo apt install -y mysql-server 
-sudo -E apt-get install mysql-server mysql-client --assume-yes --force-yes
 
 
 #echo -e "\n\nInstalling net-tools\n"
