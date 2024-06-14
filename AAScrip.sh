@@ -2,14 +2,13 @@
 #ubuntu 20.04
 
 #////////////////////////////////////////
-echo -e "\n\nconfiguramos servicios unanttended\n"
-sudo systemctl stop unattended-upgrades.service
-sudo systemctl start unattended-upgrades.service
-sudo systemctl restart unattended-upgrades.service
+#set debian frontend to not prompt
+export DEBIAN_FRONTEND="noninteractive";
+#update apt to get mysql repository
+sudo apt-get update
 
-sudo systemctl restart unattended-upgrades.service
-sudo systemctl restart packagekit.service
-sudo systemctl restart udisks2.service
+#install mysql according to previous config
+sudo -E apt-get install mysql-server mysql-client --assume-yes --force-yes
 
 #/////////////////////////////////////////
 
@@ -19,6 +18,7 @@ DIRECTORIO_TEMPORAL="/var/www/temp"
 DIRECTORIO_TEMPORAL_GITHUB="/var/www/temp/Emil_R"
 DIRECTORIO_WWW="/var/www"
 DIRECTORIO_ORIGEN="/var"
+REPOSITORIO_GITHUB="https://github.com/EmilGutierrez99/Emil_R.git"
 
 
 
@@ -33,10 +33,13 @@ sudo apt install -y php libapache2-mod-php -y
 sudo apt install -y php-curl php-gd php-json php-mbstring php-xml -y
 
 echo -e "\n\nInstalling MySQL\n"
-sudo apt install -y mysql-server 
+#install mysql according to previous config
+#sudo apt install -y mysql-server 
+sudo -E apt-get install mysql-server mysql-client --assume-yes --force-yes
 
-echo -e "\n\nInstalling net-tools\n"
-sudo apt install -y net-tools 
+
+#echo -e "\n\nInstalling net-tools\n"
+#sudo apt install -y net-tools 
 
 #seteando el espacio de trabajo
 cd $DIRECTORIO_ORIGEN/ #cd /var/
@@ -66,7 +69,7 @@ sudo mkdir $DIRECTORIO_TEMPORAL
 #clonar el repositorio de github en la carpeta temporal 
 echo -e "\n\nClonamos repositorio de github\n"
 cd $DIRECTORIO_TEMPORAL/
-sudo git clone https://github.com/EmilGutierrez99/Emil_R.git
+sudo git clone $REPOSITORIO_GITHUB
 
 #hacer los checkouts de las ramas y actualizar ramas
 echo -e "\n\nCambiamos de rama a la rama de desarrollo\n"
@@ -87,6 +90,7 @@ cd $DIRECTORIO_WWW/
 sudo rm -r temp
 
 echo -e "\n\nFin\n"
+
 
 
 
