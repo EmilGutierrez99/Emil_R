@@ -54,7 +54,7 @@ echo "Apache se ha instalado y configurado correctamente de forma desatendida."
 sudo apt install -y php libapache2-mod-php php-mysql php-cli php-curl php-zip php-gd php-mbstring php-xml
 
 # Verificar la versión de PHP instalada
-php -v
+sudo php -v
 
 echo "PHP se ha instalado y configurado correctamente de forma desatendida."
 
