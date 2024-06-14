@@ -1,4 +1,5 @@
-export DEBIAN_FRONTEND="noninteractive";
+#!/bin/bash
+#install mysql
 #update apt to get mysql repository
 sudo apt-get update --assume-yes --force-yes
 sudo apt-get upgrade --assume-yes --force-yes
