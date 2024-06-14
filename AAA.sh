@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Actualizar la lista de paquetes
-sudo apt update
+sudo apt update -y
 
 # Instalar debconf-utils para preconfigurar la instalación
 sudo apt install -y debconf-utils
