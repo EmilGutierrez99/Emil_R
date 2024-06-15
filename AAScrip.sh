@@ -22,7 +22,7 @@ echo "mysql-server mysql-server/root_password_again password $DB_ROOT_PASSWORD" 
 sudo apt install -y mysql-server
 
 # Habilitar el servicio MySQL para que arranque automáticamente al iniciar el sistema
-sudo systemctl enable mysql
+#sudo systemctl enable mysql
 
 # Iniciar el servicio MySQL
 sudo systemctl start mysql
