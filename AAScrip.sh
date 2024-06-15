@@ -1,11 +1,16 @@
 #!/bin/bash
 
-# Actualizar la lista de paquetes
+# Actualizar lista de paquetes
 sudo apt update -y
+
+# Actualizar y mejorar todos los paquetes
 sudo apt upgrade -y
 
-sudo apt-get install -f
+# Reiniciar todos los servicios que necesiten ser reiniciados
+sudo systemctl daemon-reexec
 
+# Reiniciar servicios que usan bibliotecas obsoletas
+sudo systemctl restart $(systemctl list-units --type=service --state=running | grep -o '^[^ ]*')
 
 #Mysql
 #############################################
