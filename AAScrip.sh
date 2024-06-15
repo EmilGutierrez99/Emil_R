@@ -1,9 +1,10 @@
 #!/bin/bash
-#ubuntu 20.04
 
 # Actualizar la lista de paquetes
 sudo apt update -y
 sudo apt upgrade -y
+
+sudo apt-get install -f
 
 
 #Mysql
@@ -25,10 +26,10 @@ sudo apt install -y mysql-server
 #sudo systemctl enable mysql
 
 # Iniciar el servicio MySQL
-sudo systemctl start mysql
+#sudo systemctl start mysql
 
 # Mostrar el estado del servicio MySQL
-sudo systemctl status mysql
+#sudo systemctl status mysql
 
 echo "MySQL se ha instalado y configurado correctamente de forma desatendida."
 
@@ -56,7 +57,7 @@ echo "Apache se ha instalado y configurado correctamente de forma desatendida."
 sudo apt install -y php libapache2-mod-php php-mysql php-cli php-curl php-zip php-gd php-mbstring php-xml
 
 # Verificar la versión de PHP instalada
-sudo php -v
+#sudo php -v
 
 echo "PHP se ha instalado y configurado correctamente de forma desatendida."
 
