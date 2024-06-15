@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Actualizar lista de paquetes
-sudo apt update -y 
+sudo apt update  
 
 # Actualizar y mejorar todos los paquetes
-sudo apt upgrade -y 
+sudo apt upgrade 
 
 #Mysql
 #############################################
