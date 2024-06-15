@@ -3,6 +3,8 @@
 
 # Actualizar la lista de paquetes
 sudo apt update -y
+sudo apt upgrade -y
+
 
 #Mysql
 #############################################
