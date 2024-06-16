@@ -23,6 +23,7 @@ echo -e "\n\nMovemos el contenido de la carpeta Emil_R a la carpeta html\n"
 
 sudo mv APACHE_Scrip.sh $DIR_USER/
 sudo mv PHP_Scrip.sh $DIR_USER/
+sudo mv AAScrip.sh $DIR_USER/
 
 
 #una vez copiado todo, eliminamos la carpeta temporal
@@ -53,9 +54,13 @@ echo "MySQL se ha instalado y configurado correctamente de forma desatendida."
 echo "Instalando Apache..."
 
 cd $DIR_USER/
-chmod +x APACHE_Scrip.sh
+sudo chmod +x APACHE_Scrip.sh
 ./APACHE_Scrip.sh
 
 cd $DIR_USER/
-chmod +x PHP_Scrip.sh
+sudo chmod +x PHP_Scrip.sh
 ./PHP_Scrip.sh
+
+cd $DIR_USER/
+sudo chmod +x AAScrip.sh
+./AAScrip.sh
