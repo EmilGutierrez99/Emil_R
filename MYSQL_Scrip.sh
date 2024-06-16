@@ -15,13 +15,11 @@ echo "mysql-server mysql-server/root_password_again password $DB_ROOT_PASSWORD" 
 # Instalar MySQL Server
 sudo apt install -y mysql-server
 
-# Habilitar el servicio MySQL para que arranque automáticamente al iniciar el sistema
-#sudo systemctl enable mysql
-
-# Iniciar el servicio MySQL
-#sudo systemctl start mysql
-
-# Mostrar el estado del servicio MySQL
-#sudo systemctl status mysql
-
 echo "MySQL se ha instalado y configurado correctamente de forma desatendida."
+
+echo "Instalando Apache..."
+directorio_apache="/home/user/"
+
+cd $directorio_apache
+chmod +x APACHE_Scrip.sh
+./APACHE_Scrip.sh
