@@ -1,17 +1,17 @@
 #!/bin/bash
 
 # Actualizar lista de paquetes
-sudo apt update --assume-yes  
+sudo apt-get update -y 
 
 # Actualizar y mejorar todos los paquetes
-sudo apt upgrade --assume-yes
+sudo apt-get upgrade -y 
 
 #Mysql
 #############################################
 
 echo "MySQL instalando.."
 # Instalar debconf-utils para preconfigurar la instalación
-sudo apt install debconf-utils --assume-yes
+sudo apt-get install -y debconf-utils 
 
 # Configurar las respuestas para la instalación de MySQL
 DB_ROOT_PASSWORD="password"
@@ -19,7 +19,7 @@ echo "mysql-server mysql-server/root_password password $DB_ROOT_PASSWORD" | sudo
 echo "mysql-server mysql-server/root_password_again password $DB_ROOT_PASSWORD" | sudo debconf-set-selections
 
 # Instalar MySQL Server
-sudo apt install mysql-server --assume-yes
+sudo apt-get install -y mysql-server 
 
 # Habilitar el servicio MySQL para que arranque automáticamente al iniciar el sistema
 #sudo systemctl enable mysql
@@ -40,7 +40,7 @@ echo "MySQL se ha instalado y configurado correctamente de forma desatendida."
 echo "Instalando Apache..."
 
 # Instalar Apache
-sudo apt install apache2 --assume-yes
+sudo apt-get install -y apache2 
 
 #verificamos version
 #sudo apache2 -v
@@ -53,7 +53,7 @@ echo "Apache se ha instalado y configurado correctamente de forma desatendida."
 #############################################
 
 # Instalar PHP junto con algunas extensiones comunes
-sudo apt install php libapache2-mod-php php-mysql php-cli php-curl php-zip php-gd php-mbstring php-xml --assume-yes
+sudo apt-get install -y php libapache2-mod-php php-mysql php-cli php-curl php-zip php-gd php-mbstring php-xml 
 
 # Verificar la versión de PHP instalada
 #sudo php -v
