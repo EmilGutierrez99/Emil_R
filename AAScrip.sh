@@ -1,25 +1,25 @@
 #!/bin/bash
 
 # Actualizar lista de paquetes
-sudo apt-get update -y 
+#sudo apt-get update -y 
 
 # Actualizar y mejorar todos los paquetes
-sudo apt-get upgrade -y 
+#sudo apt-get upgrade -y 
 
 #Mysql
 #############################################
 
-echo "MySQL instalando.."
+#echo "MySQL instalando.."
 # Instalar debconf-utils para preconfigurar la instalación
-sudo apt-get install -y debconf-utils 
+#sudo apt-get install -y debconf-utils 
 
 # Configurar las respuestas para la instalación de MySQL
-DB_ROOT_PASSWORD="password"
-echo "mysql-server mysql-server/root_password password $DB_ROOT_PASSWORD" | sudo debconf-set-selections
-echo "mysql-server mysql-server/root_password_again password $DB_ROOT_PASSWORD" | sudo debconf-set-selections
+#DB_ROOT_PASSWORD="password"
+#echo "mysql-server mysql-server/root_password password $DB_ROOT_PASSWORD" | sudo debconf-set-selections
+#echo "mysql-server mysql-server/root_password_again password $DB_ROOT_PASSWORD" | sudo debconf-set-selections
 
 # Instalar MySQL Server
-sudo apt-get install -y mysql-server 
+#sudo apt-get install -y mysql-server 
 
 # Habilitar el servicio MySQL para que arranque automáticamente al iniciar el sistema
 #sudo systemctl enable mysql
@@ -30,22 +30,22 @@ sudo apt-get install -y mysql-server
 # Mostrar el estado del servicio MySQL
 #sudo systemctl status mysql
 
-echo "MySQL se ha instalado y configurado correctamente de forma desatendida."
+#echo "MySQL se ha instalado y configurado correctamente de forma desatendida."
 
 #############################################
 
 # Apache
 #############################################
 
-echo "Instalando Apache..."
+#echo "Instalando Apache..."
 
 # Instalar Apache
-sudo apt-get install -y apache2 
+#sudo apt-get install -y apache2 
 
 #verificamos version
 #sudo apache2 -v
 
-echo "Apache se ha instalado y configurado correctamente de forma desatendida."
+#echo "Apache se ha instalado y configurado correctamente de forma desatendida."
 
 #############################################
 
@@ -53,17 +53,14 @@ echo "Apache se ha instalado y configurado correctamente de forma desatendida."
 #############################################
 
 # Instalar PHP junto con algunas extensiones comunes
-sudo apt-get install -y php libapache2-mod-php php-mysql php-cli php-curl php-zip php-gd php-mbstring php-xml 
+#sudo apt-get install -y php libapache2-mod-php php-mysql php-cli php-curl php-zip php-gd php-mbstring php-xml 
 
 # Verificar la versión de PHP instalada
 #sudo php -v
 
-echo "PHP se ha instalado y configurado correctamente de forma desatendida."
+#echo "PHP se ha instalado y configurado correctamente de forma desatendida."
 
 #############################################
-
-
-
 
 
 #definir los repositorios y todas las constantes

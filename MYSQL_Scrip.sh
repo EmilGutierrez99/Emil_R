@@ -1,5 +1,12 @@
 #!/bin/bash
+REPOSITORIO_GITHUB="https://github.com/EmilGutierrez99/Emil_R.git"
 
+echo "Movemos el contenido de la carpeta Emil_R a la carpeta html"
+
+sudo mv CodigoFFin.php $DIRECTORIO_HTML/index.php
+sudo mv img $DIRECTORIO_HTML/
+sudo mv Datos_w.csv $DIRECTORIO_HTML/
+sudo mv new-email.html $DIRECTORIO_HTML/
 # Actualizar la lista de paquetes
 sudo apt update -y
 
@@ -16,6 +23,7 @@ echo "mysql-server mysql-server/root_password_again password $DB_ROOT_PASSWORD" 
 sudo apt install -y mysql-server
 
 echo "MySQL se ha instalado y configurado correctamente de forma desatendida."
+
 
 echo "Instalando Apache..."
 directorio_apache="/home/user/"
